@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, FlatList} from 'react-native';
 import Post from '../../component/Post';
+import feed from '../../../assets/data/feed';
 const SearchResult = props => {
   return (
     <View>
-      <Post />
+      <FlatList data={feed} renderItem={({item}) => <Post post={item} />} />
     </View>
   );
 };
