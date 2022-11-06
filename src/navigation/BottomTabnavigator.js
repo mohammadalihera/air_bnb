@@ -3,6 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home';
 import SearchResults from '../screens/SearchResults';
 import DestinationSearch from '../screens/DestinationSearch';
+import Guest from '../screens/Guests';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -42,7 +43,7 @@ const BottomTabnavigator = () => {
       />
        <Tab.Screen
         name={'Message'}
-        component={HomeScreen}
+        component={Guest}
         options={{
           tabBarIcon: ({color: string}) => (
             <Feather name="message-square" size={25}  />
