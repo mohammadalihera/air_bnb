@@ -2,6 +2,7 @@ import React from 'react';
 import {ImageBackground, Pressable, Text, View} from 'react-native';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import styles from './style';
+import 'react-native-gesture-handler';
 
 const HomeScreen = () => {
   return (

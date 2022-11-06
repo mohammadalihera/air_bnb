@@ -8,23 +8,15 @@
 
 import type {Node} from 'react';
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {StatusBar, useColorScheme} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screens/home';
-
-import Entype from 'react-native-vector-icons/Entypo';
+import 'react-native-gesture-handler';
+import Router from './src/navigation/Router';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
-
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -35,17 +27,11 @@ const App: () => Node = () => {
 
   return (
     <>
-    <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        
-      />
-    <SafeAreaView >
-      <HomeScreen/>
-    </SafeAreaView>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <Router/>
+      {/* <HomeScreen /> */}
     </>
-    
   );
 };
-
 
 export default App;
